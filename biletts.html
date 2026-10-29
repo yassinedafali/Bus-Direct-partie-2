@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="BusDirect : liste des billets réservés pour la ligne Safi - Marrakech.">
+    <title>BusDirect | Billets</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="grid grid-cols-1 md:grid-cols-[15%_85%] min-h-screen bg-zinc-950 font-sans">
+
+   
+  <header class="bg-zinc-900 py-5 border-b-4 border-amber-500 md:min-h-screen md:sticky md:top-0 md:border-b-0 md:border-r-4">
+
+            <img src="/img/logo.png" alt="BusDirect" class="ml-4 w-[80px]">
+
+            <nav aria-label="Navigation principale">
+                <ul class="mt-6 flex list-none flex-row gap-2 p-0 md:flex-col">
+
+                    <li>
+                        <a href="index.html" aria-current="page"
+                            class="block bg-amber-500 px-4 py-3 font-semibold text-black">
+                            <i class="fa-solid fa-route mr-2"></i>
+                            Trajets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cabine.html"
+                            class="block px-4 py-3 text-zinc-200 hover:bg-white/10">
+                            <i class="fa-solid fa-ticket mr-2"></i>
+                            cabine
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#biletts"
+                            class="block px-4 py-3 text-zinc-200 hover:bg-white/10">
+                            <i class="fa-solid fa-ticket mr-2"></i>
+                        biletts
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </header>
+
+    <main class="pb-6" id="billets">
+<!-- 2 header -->
+        <section class="flex justify-between items-center bg-white px-6 py-4">
+            <div>
+                <h1 class="text-2xl font-bold">Billets</h1>
+                <p class="text-gray-500">Billets réservés — Safi → Marrakech</p>
+            </div>
+            <i class="fa-solid fa-ticket text-2xl text-amber-600" aria-hidden="true"></i>
+        </section>
+
+     <section class="p-6">
+     <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+    <h3 class="text-md font-bold mb-3">Liste des Passagers</h3>
+
+    <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left">
+            <thead class="bg-gray-100 text-gray-700 text-xs uppercase">
+                <tr>
+                    <th class="px-4 py-3">Passager</th>
+                    <th class="px-4 py-3">Siège</th>
+                    <th class="px-4 py-3">Tarif</th>
+                    <th class="px-4 py-3">Statut</th>
+                </tr>
+            </thead>
+
+            <tbody id="passenger" class="divide-y divide-gray-200">
+            </tbody>
+        </table>
+    </div>
+</div>
+</section>
+
+    </main>
+    
+    <script src="js/billets.js" defer></script>
+</body>
+</html>

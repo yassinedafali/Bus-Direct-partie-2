@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "departure": "Safi",
+    "departure": "safi",
     "destination": "Youssoufia",
     "departureTime": "07:30",
     "arrivalTime": "08:30",
@@ -791,6 +791,7 @@
     "price": 50,
     "capacity": 20,
     "reservations": [
+      
       {
         "seat": 1,
         "name": "Salma Ouazzani",

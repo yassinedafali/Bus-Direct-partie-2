@@ -83,7 +83,7 @@
                         <p class="text-sm text-zinc-500">Total des places</p>
                         <i class="fa-solid fa-chair text-xl text-amber-500"></i>
                     </div>
-                    <p class="mt-3 text-3xl font-bold">400</p>
+                    <p class="mt-3 text-3xl font-bold" id="totalpaces">400</p>
                     <p class="mt-1 text-xs text-zinc-400">20 places par trajet</p>
                 </div>
 
@@ -92,7 +92,7 @@
                         <p class="text-sm text-zinc-500">Passagers</p>
                         <i class="fa-solid fa-users text-xl text-amber-500"></i>
                     </div>
-                    <p class="mt-3 text-3xl font-bold">0</p>
+                    <p class="mt-3 text-3xl font-bold" id="totalpassager">0</p>
                     <p class="mt-1 text-xs text-zinc-400">Passagers réservés</p>
                 </div>
 
@@ -101,7 +101,7 @@
                         <p class="text-sm text-zinc-500">Revenus totaux</p>
                         <i class="fa-solid fa-money-bill-wave text-xl text-amber-500"></i>
                     </div>
-                    <p class="mt-3 text-3xl font-bold">0 DH</p>
+                    <p class="mt-3 text-3xl font-bold" id="totalprice">0 DH</p>
                     <p class="mt-1 text-xs text-zinc-400">Revenus du réseau</p>
                 </div>
 
@@ -166,70 +166,8 @@
                 </div>
 
                 <!-- TRIPS CONTAINER -->
-                <div id="trips-container"
-                    class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-
-                    <!-- EXAMPLE TRIP CARD -->
-                    <article class="rounded-xl border border-zinc-200 p-5 transition hover:shadow-md">
-
-                        <div class="mb-4 flex items-center justify-between">
-                            <span class="rounded-lg bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">
-                                Trajet 01
-                            </span>
-
-                            <span class="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
-                                Disponible
-                            </span>
-                        </div>
-
-                        <div class="mb-5 flex items-center justify-between gap-3">
-
-                            <div>
-                                <p class="text-xs text-zinc-500">Départ</p>
-                                <h3 class="text-lg font-bold">Safi</h3>
-                                <p class="text-sm text-zinc-500">08:00</p>
-                            </div>
-
-                            <div class="flex flex-1 flex-col items-center">
-                                <i class="fa-solid fa-bus text-xl text-amber-500"></i>
-                                <div class="my-2 h-px w-full bg-zinc-300"></div>
-                                <span class="text-xs text-zinc-500">5h</span>
-                            </div>
-
-                            <div class="text-right">
-                                <p class="text-xs text-zinc-500">Arrivée</p>
-                                <h3 class="text-lg font-bold">Marrakech</h3>
-                                <p class="text-sm text-zinc-500">13:00</p>
-                            </div>
-
-                        </div>
-
-                        <div class="grid grid-cols-3 gap-2 border-t border-zinc-200 pt-4 text-center">
-
-                            <div>
-                                <p class="text-xs text-zinc-500">Prix</p>
-                                <p class="font-bold">80 DH</p>
-                            </div>
-
-                            <div>
-                                <p class="text-xs text-zinc-500">Places libres</p>
-                                <p class="font-bold text-green-600">20</p>
-                            </div>
-
-                            <div>
-                                <p class="text-xs text-zinc-500">Attente</p>
-                                <p class="font-bold">0</p>
-                            </div>
-
-                        </div>
-
-                        <a href="cabine.html?id=1"
-                            class="mt-5 block rounded-lg bg-amber-500 p-3 text-center font-semibold text-black hover:bg-amber-400">
-                            <i class="fa-solid fa-chair mr-2"></i>
-                            Gérer les réservations
-                        </a>
-
-                    </article>
+                <div id="trips-container" class="grid grid-cols-2 gap-5 lg:grid-cols-3">
+</div>
 
                 </div>
 
@@ -238,21 +176,25 @@
                     class="mt-6 flex flex-wrap items-center justify-center gap-2">
 
                     <button type="button"
+                    id="bouton1"
                         class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-black">
                         1
                     </button>
 
                     <button type="button"
+                    id="bouton2"
                         class="rounded-lg border border-zinc-300 px-4 py-2 hover:bg-amber-100">
                         2
                     </button>
 
                     <button type="button"
+                    id="bouton3"
                         class="rounded-lg border border-zinc-300 px-4 py-2 hover:bg-amber-100">
                         3
                     </button>
 
                     <button type="button"
+                    id="bouton4"
                         class="rounded-lg border border-zinc-300 px-4 py-2 hover:bg-amber-100">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
@@ -270,5 +212,7 @@
     </div>
 <script type="module" src="./js/reservations.js"></script>
 <script src="js/render.js"></script>
+<script type="module" src="./js/main-trajets.js"></script>
+
 </body>
 </html>

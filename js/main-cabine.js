@@ -1,27 +1,14 @@
-const tabReserve = document.getElementById("tab-reserve");
-const tabEdit = document.getElementById("tab-edit");
-const tabCancel = document.getElementById("tab-cancel");
-
 const reserveContent = document.getElementById("reserve-content");
 const editContent = document.getElementById("edit-content");
 const cancelContent = document.getElementById("cancel-content");
 
-tabReserve.addEventListener("click", () => {
-  reserveContent.hidden = false;
-  editContent.hidden = true;
-  cancelContent.hidden = true;
-});
+function showTab(tabToShow) {
+  [reserveContent, editContent, cancelContent].forEach((el) => {
+    el.classList.add("hidden");
+  });
+  tabToShow.classList.remove("hidden");
+}
 
-tabEdit.addEventListener("click", () => {
-  reserveContent.hidden = true;
-  editContent.hidden = false;
-  cancelContent.hidden = true;
-  editContent.classList.remove("hidden");
-});
-
-tabCancel.addEventListener("click", () => {
-  reserveContent.hidden = true;
-  editContent.hidden = true;
-  cancelContent.hidden = false;
-  cancelContent.classList.remove("hidden");
-});
+document.getElementById("tab-reserve").addEventListener("click", () => showTab(reserveContent));
+document.getElementById("tab-edit").addEventListener("click", () => showTab(editContent));
+document.getElementById("tab-cancel").addEventListener("click", () => showTab(cancelContent));

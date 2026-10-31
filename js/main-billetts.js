@@ -4,6 +4,12 @@ const seats = JSON.parse(localStorage.getItem("seats")) ||
         passenger: null
     }));
 
+
+
+
+
+
+    
 const pass = document.getElementById("passenger");
 
 pass.innerHTML = "";

@@ -3,17 +3,9 @@ const seats = JSON.parse(localStorage.getItem("seats")) ||
         number: i + 1,
         passenger: null
     }));
-
-
-
-
-
-
-    
 const pass = document.getElementById("passenger");
 
 pass.innerHTML = "";
-
 seats.forEach(seat => {
     if (seat.passenger !== null) {
         pass.innerHTML += `

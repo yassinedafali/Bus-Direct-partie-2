@@ -1,3 +1,5 @@
+import { initialiser } from "./store.js";
+let data = await initialiser()
 
  const nomInput = document.getElementById("nom");
 const seatSelect = document.getElementById("seat-select");
@@ -41,7 +43,6 @@ function renderSeats() {
       }"></span>
       <i class="fa-solid fa-user text-gray-500"></i>
     `;
-    
     seatCard.querySelector(".badge").textContent =
       seat.passenger ?  seat.passenger : "Libre";
 
@@ -71,11 +72,11 @@ function renderStats() {
 }
 render()
 
-let msgTimer;
-let timers={};
-function notify(el, text, isError = false) {
- clearTimeout(timers[el.id]);
-  el.textContent = text;
-  el.className = "text-sm font-medium min-h-[1.25rem] " + (isError ? "text-red-600" : "text-green-600")
-  timers[el.id]= setTimeout(() => { el.textContent = ""; }, 3000);
-}
+// let msgTimer;
+// let timers={};
+// function notify(el, text, isError = false) {
+//  clearTimeout(timers[el.id]);
+//   el.textContent = text;
+//   el.className = "text-sm font-medium min-h-[1.25rem] " + (isError ? "text-red-600" : "text-green-600")
+//   timers[el.id]= setTimeout(() => { el.textContent = ""; }, 3000);
+// }

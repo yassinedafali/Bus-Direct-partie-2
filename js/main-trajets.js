@@ -81,7 +81,7 @@ function disponible(start, end) {
 
             </div>
 
-            <a href="cabine.html?${data[i].id}"
+            <a href="cabine.html?id=${data[i].id}"
                 class="mt-5 block rounded-lg bg-amber-500 p-3 text-center font-semibold text-black hover:bg-amber-400">
 
                 <i class="fa-solid fa-chair mr-2"></i>

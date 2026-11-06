@@ -1,23 +1,37 @@
-import { initialiser } from "./store.js";
 
-let data = await initialiser()
+const timers = {};
 
-console.log(data)
+export function notify(el, text, isError = false) {
+  clearTimeout(timers[el.id]);
 
-reserveForm.addEventListener("submit", e => {
-  e.preventDefault();
-  const name = nomInput.value.trim();
-  if (!name) return notify(reserveMsg, "Le nom du passager est obligatoire.", true);
-  if (nameExists(name)) return notify(reserveMsg, "Ce passager a déjà une réservation.", true);
+  el.textContent = text;
+  el.className =
+    "text-sm font-medium min-h-[1.25rem] " +
+    (isError ? "text-red-600" : "text-green-600");
 
-  const seat = seatSelect.value
-    ? seats.find(s => s.number === Number(seatSelect.value))
-    : freeSeats()[0];
-////msg de bus est terminie
-  if (!seat) return notify(reserveMsg, "Le bus est complet.", true);
-  
-  seat.passenger = name;
-  render();
-  reserveForm.reset();
-  notify(reserveMsg, `Réservation confirmée : siège ${seat.number}.`);
-});
+  timers[el.id] = setTimeout(() => {
+    el.textContent = "";
+  }, 3000);
+}
+
+export const sameName = (a, b) =>
+  a.trim().toLowerCase() === b.trim().toLowerCase();
+
+export const phoneValid = phone =>
+  /^0[67]\d{8}$/.test(phone);
+
+export const inWaitlist = (trip, name) =>
+  (trip.waitlist || []).some(w =>
+    sameName(w.name, name)
+  );
+
+export const nameTaken = (trip, name, exceptSeat = null) =>
+  trip.reservations.some(
+    r =>
+      r.seat !== exceptSeat &&
+      r.name &&
+      sameName(r.name, name)
+  ) || inWaitlist(trip, name);
+
+
+

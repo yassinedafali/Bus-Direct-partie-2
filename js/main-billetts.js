@@ -1,20 +1,10 @@
-const seats = JSON.parse(localStorage.getItem("seats")) ||
-    Array.from({ length: 20 }, (_, i) => ({
-        number: i + 1,
-        passenger: null
-    }));
+import { initialiser } from "./store.js";
 
-
-
-
-
-
-    
+let data = await initialiser();
 const pass = document.getElementById("passenger");
 
 pass.innerHTML = "";
-
-seats.forEach(seat => {
+data.forEach(seat => {
     if (seat.passenger !== null) {
         pass.innerHTML += `
             <tr>

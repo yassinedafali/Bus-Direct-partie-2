@@ -1,3 +1,4 @@
+
 import { initialiser } from "./store.js";
 import { render } from "./render.js";
 
@@ -316,5 +317,3 @@ btnSuprime.addEventListener("click", () => {
 
 // Initialisation
 refreshAll();
-
-

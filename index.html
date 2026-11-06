@@ -35,14 +35,14 @@
 
                     <li>
                         <a href="cabine.html"
-                            class="block px-4 py-3 text-zinc-200 hover:bg-white/10">
+                            class="block px-4 py-3 text-black hover:bg-white/10">
                             <i class="fa-solid fa-ticket mr-2"></i>
                             cabine
                         </a>
                     </li>
                     <li>
                         <a href="biletts.html"
-                            class="block px-4 py-3 text-zinc-200 hover:bg-white/10">
+                            class="block px-4 py-3 text-black hover:bg-white/10">
                             <i class="fa-solid fa-ticket mr-2"></i>
                         biletts
                         </a>
@@ -139,7 +139,8 @@
                     </div>
 
                     <div class="flex items-end">
-                        <button type="button"
+                        <button type="submit"
+                        id="fillter-btn"
                             class="w-full rounded-lg bg-amber-500 p-3 font-semibold text-black hover:bg-amber-400">
                             <i class="fa-solid fa-filter mr-2"></i>
                             Filtrer
@@ -166,7 +167,7 @@
                 </div>
 
                 <!-- TRIPS CONTAINER -->
-                <div id="trips-container" class="grid grid-cols-2 gap-5 lg:grid-cols-3">
+                <div id="trips-container" class="grid grid-cols-1 gap-5 lg:grid-cols-3">
 </div>
 
                 </div>
@@ -177,25 +178,25 @@
 
                     <button type="button"
                     id="bouton1"
-                        class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-black">
+                        class="rounded-lg bg-white hover:bg-amber-500 px-4 py-2 font-semibold text-black">
                         1
                     </button>
 
                     <button type="button"
                     id="bouton2"
-                        class="rounded-lg border border-zinc-300 px-4 py-2 hover:bg-amber-100">
+                        class="rounded-lg border bg-white px-4 py-2 hover:bg-amber-500">
                         2
                     </button>
 
                     <button type="button"
                     id="bouton3"
-                        class="rounded-lg border border-zinc-300 px-4 py-2 hover:bg-amber-100">
+                        class="rounded-lg bg-white border border-zinc-300 px-4 py-2 hover:bg-amber-500">
                         3
                     </button>
 
                     <button type="button"
                     id="bouton4"
-                        class="rounded-lg border border-zinc-300 px-4 py-2 hover:bg-amber-100">
+                        class="rounded-lg  bg-white border-zinc-300 px-4 py-2 hover:bg-amber-500">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
 
@@ -210,9 +211,9 @@
 
         </main>
     </div>
-<script type="module" src="./js/reservations.js"></script>
-<script src="js/render.js"></script>
-<script type="module" src="./js/main-trajets.js"></script>
+
+<script type="module" src="js/main-trajets.js"></script>
+<script type="module" src="js/main-trajets.js"></script>
 
 </body>
 </html>

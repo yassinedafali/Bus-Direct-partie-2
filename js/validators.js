@@ -1,4 +1,3 @@
-
 const timers = {};
 
 export function notify(el, text, isError = false) {
@@ -32,6 +31,3 @@ export const nameTaken = (trip, name, exceptSeat = null) =>
       r.name &&
       sameName(r.name, name)
   ) || inWaitlist(trip, name);
-
-
-

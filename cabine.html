@@ -22,7 +22,7 @@
 
                     <li>
                         <a href="index.html" aria-current="page"
-                            class="block bg-amber-500 px-4 py-3 font-semibold text-black">
+                            class="block  px-4 py-3 font-semibold text-black">
                             <i class="fa-solid fa-route mr-2"></i>
                             Trajets
                         </a>
@@ -30,14 +30,14 @@
 
                     <li>
                         <a href="#cabine"
-                            class="block px-4 py-3 text-zinc-200 hover:bg-white/10">
+                            class="block px-4 py-3 text-black bg-amber-500 hover:bg-white/10">
                             <i class="fa-solid fa-ticket mr-2"></i>
                             cabine
                         </a>
                     </li>
                     <li>
                         <a href="biletts.html"
-                            class="block px-4 py-3 text-zinc-200 hover:bg-white/10">
+                            class="block px-4 py-3 text-black hover:bg-white/10">
                             <i class="fa-solid fa-ticket mr-2"></i>
                         biletts
                         </a>
@@ -165,7 +165,7 @@
                             <label for="numero" class="block text-sm font-medium mb-2">
                                numero de tele 
                             </label>
-                            <input type="tel" id="nom" name="nom"
+                            <input type="tel" id="tele" name="tele"
                                 placeholder="Entrez nomber"
                                 autocomplete="off"
                                 class="w-full border border-gray-300 rounded-lg p-3 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200">
@@ -192,7 +192,7 @@
                     </form>
                 </div>
                 <!-- Contenu Modifier (tBdal smiya) -->
-                <div id="edit-content" class="hidden">
+                <div id="edit-content" class="hidden ">
 
                     <h2 class="text-xl font-bold mb-4">Modifier une réservation</h2>
                     
@@ -231,7 +231,7 @@
                             class="text-sm font-medium min-h-[1.25rem]"></p>
                     </div>
                 </div>
-                <!-- content de suprime  -->
+                <!-- partie de annuler -->
                 <div id="cancel-content" class="hidden">
 
                     <h2 class="text-xl font-bold mb-4">Annuler une réservation</h2>
@@ -250,7 +250,7 @@
                             class="w-full bg-red-600 text-white rounded-lg p-3 font-semibold hover:bg-red-700">
                             Annuler le name 
                         </button>
-                        <p id="annuler-msg"
+                        <p id="annuler-msg" role="status" aria-live="polite"
                             class="text-sm font-medium min-h-[1.25rem]"></p>
                     </div>
                 </div>
@@ -258,11 +258,9 @@
             </div>
         </section>
     </main>
-    <script src="js/store.js"></script>
-<script src="js/validators.js"></script>
-<script src="js/render.js"></script>
-<script src="js/main-cabine.js"></script>
-<script type="module" src="js/reservations.js"></script>
+   <script type="module" src="js/reservations.js"
+   ></script>
+ <script type="module" src="js/main-cabine.js"></script>
     
 
 </body>

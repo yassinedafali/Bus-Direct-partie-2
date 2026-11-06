@@ -33,6 +33,9 @@ data.forEach(trip => {
                     ${price.toFixed(2)} DH
                 </td>
 
+
+                
+
                 <td class="px-4 py-3 whitespace-nowrap">
                     <span class="text-green-700">
                         Confirmé

@@ -8,7 +8,7 @@
     <title>BusDirect | Gestion des réservations de bus Safi - Marrakech</title>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body class="grid grid-cols-1 md:grid-cols-[15%_85%] min-h-screen bg-zinc-950 font-sans">
@@ -19,7 +19,7 @@
 
             <nav aria-label="Navigation principale">
                 <ul class="mt-6 flex list-none flex-row gap-2 p-0 md:flex-col">
-
+<script type="module" src="js/main-trajets.js"></script>
                     <li>
                         <a href="index.html" aria-current="page"
                             class="block  px-4 py-3 font-semibold text-black">
@@ -213,6 +213,16 @@
                                 placeholder="new name"
                                 class="w-full border border-gray-300 rounded-lg p-3 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200">
                         </div>
+                          <div>
+                            <label for="numero" class="block text-sm font-medium mb-2">
+                               new tele 
+                                <input
+            type="tel"
+            id="new-tele"
+     placeholder="New phone number"
+           class="w-full border border-gray-300 rounded-lg p-3 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+    >
+</div>
                          <div>
                             <label for="newselect" class="block text-sm font-medium mb-2">
                                new Siège
@@ -260,7 +270,9 @@
     </main>
    <script type="module" src="js/reservations.js"
    ></script>
- <script type="module" src="js/main-cabine.js"></script>
+    <script type="module" src="js/main-cabine.js"
+   ></script>
+ 
     
 
 </body>

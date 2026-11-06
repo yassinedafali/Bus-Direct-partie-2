@@ -27,6 +27,7 @@ if (!seats.waitlist) {
 const VIP_COUNT = 4;
 
 // Elements HTML
+const newtele = document.getElementById("new-tele");
 const reserveForm = document.getElementById("reserve-form");
 const reserveMsg = document.getElementById("reserve-msg");
 const nomInput = document.getElementById("nom");
@@ -223,9 +224,20 @@ confiermeedit.addEventListener("click", () => {
   }
 
   const name = newname.value.trim() || current.name;
+  const phone = newtele.value.trim() || current.phone;
+
+  // Vérifier le nom
+  if (!name) {
+    return notify(modifieMsg, "Le nom est obligatoire.", true);
+  }
 
   if (nameTaken(seats, name, current.seat)) {
     return notify(modifieMsg, "Ce nom est déjà utilisé.", true);
+  }
+
+  // Vérifier le téléphone
+  if (!phoneValid(phone)) {
+    return notify(modifieMsg, "Numéro de téléphone invalide.", true);
   }
 
   const oldSeat = current.seat;
@@ -240,7 +252,9 @@ confiermeedit.addEventListener("click", () => {
     return notify(modifieMsg, "Ce siège est déjà occupé.", true);
   }
 
+  // Modifier les informations
   current.name = name;
+  current.phone = phone;
   current.seat = newSeat;
 
   let promoted = null;
@@ -253,6 +267,7 @@ confiermeedit.addEventListener("click", () => {
 
   namecheck.value = "";
   newname.value = "";
+  newtele.value = "";
 
   let msg = `Réservation modifiée : siège ${newSeat}.`;
 
